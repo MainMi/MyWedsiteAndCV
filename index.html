@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/index.css">
+    <script src="https://kit.fontawesome.com/b373a5c7d9.js" crossorigin="anonymous"></script>
+    <title>MyWebsiteCV</title>
+</head>
+<body>
+    <section id="home">
+        <div class="menu">
+            <ul class="navigation">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#learn">Learn</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="foobar">
+                <h2>Portfolio</h2>
+                <i class="fa-solid fa-bars fa-xl toggle"></i>
+            </div>
+            <div class="title">
+                    <div class="imgBox">
+                        <img src="image/avatar.png" alt="">
+                    </div>
+                    <h2>Mikita Gavrilenko</h2>
+                    <p>I want to become Full-Stack Developer.</p>
+                    <a href="https://mainmi.github.io/MyWebsiteCV/index.html" class="btn">Download My CV</a>
+                    <ul class="link">
+                        <li><a href=""><i class="fa-brands fa-github fa-xl"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-telegram fa-xl"></i></a></li>
+                    </ul>
+            </div>
+        </div>
+        
+    </section>
+    <section id="about">
+        <div class="content">
+            <div class="textBox">
+                <h2 class="titleText">About Me</h2>
+                <p>My name is Nikita, I'm 17 years old, I'm from Ukraine and I want to become a web developer. I am confident in algorithms, data structures and basic principles of code organization. I will be a good team player and of course be flexible in my workflow. Confident knowledge of algorithms, data structures and general principles of code organization(ES12, ESLINT).I use the most modern development methodologies and technologies, such as: REST, Microservices, Socket, O_Auth 2. I want to work in a team under the guidance of experienced specialists and improve my knowlegde</p>
+                <div class="glowBox">
+                    <h1 class="glowText"><span>I</span>m<span>possible</span> work</h1>
+                    <h4>Click on the text above to see the animation</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="learn">
+        <div class="content">
+            <div class="titleBox">
+                <h2>Languages and tools</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quasi enim impedit!</p>
+            </div>
+            <div class="contentBox">
+                <div class="serviceBox">
+                    <img src="image/javascript.svg" alt="">
+                    <h2>Javascript</h2>
+                    <p>Confident knowledge of algorithms, EV Loop, promises,  and general principles of code organization(ES12, ES2021, ESLINT).</p>
+                </div>
+                <div class="serviceBox">
+                    <img src="image/typescript.svg" alt="">
+                    <h2>Typescript</h2>
+                    <p>Confident knowledge of algorithms, data structures, and use pattern: Composite, Adapter, Builder</p>
+                </div>
+                <div class="serviceBox">
+                    <img src="image/node-js.svg" alt="">
+                    <h2>Node JS</h2>
+                    <p>Good knowledge of Express, <br>Sequalize, Mongoose, HandleBars, <br>Pug, Joi, Bcrypt, Nodemailer, <br>Twillo, JWT</p>
+                </div>
+                <div class="serviceBox">
+                    <img src="image/mongodb.svg" alt="">
+                    <h2>MongoDB</h2>
+                    <p>Good knowledge of create database, data structures and aggregations</p>
+                </div>
+                <div class="serviceBox">
+                    <img src="image/mysql.svg" alt="">
+                    <h2>mySQL</h2>
+                    <p>Confident knowledge of create database, data structures</p>
+                </div>
+                <div class="serviceBox">
+                    <img src="image/angular.svg" alt="">
+                    <h2>Angular</h2>
+                    <p>Technology knowledge: Routing, Scope, Promises, ngx Formly, ngx Datatable</p>
+                </div>
+                <div class="serviceBox">
+                    <img src="image/react.svg" alt="">
+                    <h2>React</h2>
+                    <p>Technology knowledge: component, hooks, router, Redux, Redux-reducers, Redux-thunks, Axios, React-hook-forms, React-styled-components</p>
+                </div>
+                <div class="serviceBox">
+                    <img src="image/postman.svg" alt="">
+                    <h2>Postman</h2>
+                    <p>The Postman platform includes a comprehensive set of tools that help accelerate the API lifecycle—from design, testing, documentation, and mocking to the sharing and discoverability of your APIs.</p>
+                </div>
+                <div class="serviceBox">
+                    <img src="image/visual-studio-code.svg" alt="">
+                    <h2>VS Code</h2>
+                    <p>Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        const button = document.querySelector('.toggle');
+        const menu = document.querySelector('.menu');
+        const content = document.querySelectorAll('.content');
+        const foobar = document.querySelector('.foobar');
+        button.onclick = function () {
+            button.classList.toggle('active')
+            menu.classList.toggle('active')
+            foobar.classList.toggle('active')
+            content.forEach(value => value.classList.toggle('active'))
+        }
+    </script>
+</body>
+</html>
