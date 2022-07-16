@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: lightblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.website {
+    margin: 20px 0;
+    color: #111;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 50px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+    .leftSide {
+        position: relative;
+        background: #003147;
+        padding: 40px;
+        .profileText {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            .imgBox {
+                position: relative;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                overflow: hidden;
+                img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    top: 0;
+                    left: 0;
+                }
+            }
+            h2 {
+                color: #fff;
+                font-size: 1.5em;
+                font-weight: 500;
+                text-transform: uppercase;
+                line-height: 1.4em;
+                span {
+                    font-size: 0.8em;
+                    font-weight: 400;
+                }
+            }
+        }
+        .contactInfo {
+            padding-top: 40px;
+            .title {
+                color: #fff;
+                text-transform: uppercase;
+            }
+            ul {
+                position: relative;
+                margin-top: 10px;
+                list-style: none;
+                li {
+                    position: relative;
+                    font-weight: 600;
+                    margin: 10px 0;
+                    .icon {
+                        position: relative;
+                        display: inline-block;
+                        width: 30px;
+                        font-size: 18px;
+                        color: #02aefd;
+                    }
+                    .text {
+                        color: #fff;
+                        font-weight: 400;
+                        a {
+                            text-decoration: none;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            &.education {
+                margin-bottom: 15px;
+                ul {
+                    @extend ul;
+                    li {
+                        margin-bottom: 15px;
+                        h5 {
+                            color: #02aefd;
+                            font-weight: 500;
+                        }
+                        h4 {
+                            margin-top: 10px;
+                            color: #fff;
+                            font-weight: 400;
+                        }
+                        h4:nth-child(2)  {
+                            margin-top: 10px;
+                            color: #fff;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+            &.language {
+                .percent {
+                    position: relative;
+                    width: 100%;
+                    height: 6px;
+                    background: #07171f;
+                    display: block;
+                    margin-top: 5px;
+                    div {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        background: #02afff;
+                    }
+                }
+            }
+        }
+        
+    }
+    .rightSide {
+        position: relative;
+        background: #fff;
+        padding: 40px;
+        .title2 {
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 0.01em;
+            margin-top: 30px;
+            font-weight: 600;
+        }
+        p {
+            color: #333;
+            font-weight: 500;
+        }
+        .box {
+            display: flex;
+            flex-direction: row;
+            margin: 20px 0;
+            .year_company {
+                min-width: 150px;
+                h4 {
+                    color: rgb(90, 88, 88);
+                    text-transform: uppercase;
+                }
+            }
+            .textBox {
+                display: flex;
+                flex-direction: column;
+                h3 {
+                    font-size: 18px;
+                    color: #02aefd;
+                    text-transform: uppercase;
+                }
+                h4 {
+                    color: #333;
+                    font-weight: 500;
+                }
+            }
+        }
+        .about.skills {
+            .box {
+                position: relative;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 150px 1fr;
+                justify-content: center;
+                align-items: center;
+                h4 {
+                    font-size: 18px;
+                    color: #848575;
+                    text-transform: uppercase;
+                }
+                .percent {
+                    position: relative;
+                    width: 100%;
+                    height: 8px;
+                    background: #07171f;
+                    display: block;
+                    margin-top: 5px;
+                    div {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        background: #02afff;
+                    }
+                }
+            }
+            
+        }
+        .about.interest {
+            ul {
+                display: grid;
+                list-style: none;
+                grid-template-columns: repeat(4,1fr);
+                li {
+                    color: #333;
+                    font-weight: 500;
+                    margin: 10px 0;
+                    .fa-solid {
+                        color: #02aefd;
+                        font-size: 18px;
+                        width: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .container {
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+        .rightSide {
+            .about.interest {
+                ul {
+                    grid-template-columns: repeat(2,1fr);
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .container {
+        .rightSide {
+            .box {
+                flex-direction: column;
+                .year_company {
+                    margin-bottom: 5px;
+                }
+            }
+            .about.skills {
+                .box {
+                    grid-template-columns: repeat(1,1fr);
+                }
+            }
+        }
+    }
+}
